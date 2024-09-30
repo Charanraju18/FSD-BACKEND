@@ -22,10 +22,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+
+app.get('/ts', (req, res) => {
+  res.send("<h1>GET Request Called</h1>")
+
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+
+
+app.listen(9000,function(){
+  console.log("server started");
+})
+
 
 // error handler
 app.use(function(err, req, res, next) {
