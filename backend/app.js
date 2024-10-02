@@ -27,10 +27,6 @@ app.get('/ts', (req, res) => {
   res.send("<h1>GET Request Called</h1>")
 })
 
-app.get('/ts1', (req, res) => {
-  res.send("<h1>GET Request2 Called</h1>")
-})
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
